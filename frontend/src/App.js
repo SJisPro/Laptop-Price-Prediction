@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://0.0.0.0:10000/options")
+      .get("https://laptop-price-prediction-1-qh4j.onrender.com/options")
       .then((res) => setOptions(res.data))
       .catch((err) => console.error("Failed to fetch options:", err));
   }, []);
@@ -32,7 +32,10 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://0.0.0.0:10000/predict", form);
+      const res = await axios.post(
+        "https://laptop-price-prediction-1-qh4j.onrender.com/predict",
+        form
+      );
       setPrice(res.data.predicted_price);
     } catch (error) {
       console.error("Prediction error:", error);

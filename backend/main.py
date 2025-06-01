@@ -52,3 +52,7 @@ def predict_price(data: LaptopSpecs):
     input_df = pd.DataFrame([data.dict()])
     prediction = model.predict(input_df)
     return {"predicted_price": round(prediction[0], 2)}
+
+@app.get("/")
+def root():
+    return {"status": "Backend is live 🎉"}

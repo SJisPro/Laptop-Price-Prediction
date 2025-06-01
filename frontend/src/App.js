@@ -20,9 +20,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://api.render.com/deploy/srv-d0u1d9adbo4c73aaetdg?key=dWceUIGYFbI/options"
-      )
+      .get("https://laptop-price-prediction-0s3v.onrender.com/options")
       .then((res) => setOptions(res.data))
       .catch((err) => console.error("Failed to fetch options:", err));
   }, []);
@@ -35,7 +33,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://api.render.com/deploy/srv-d0u1d9adbo4c73aaetdg?key=dWceUIGYFbI/predict",
+        "https://laptop-price-prediction-0s3v.onrender.com/predict",
         form
       );
       setPrice(res.data.predicted_price);

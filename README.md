@@ -1,5 +1,8 @@
 # 💻 Laptop Price Predictor (ML + FastAPI + React)
 
+## Project App
+https://laptop-price-prediction-alpha.vercel.app/
+
 This is a full-stack web application to predict laptop prices using a machine learning model. Built with:
 
 - 🧠 **Backend**: Python, FastAPI, Scikit-learn, Joblib

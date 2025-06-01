@@ -109,7 +109,16 @@ function App() {
         <button type="submit" className="submit-button">
           Predict
         </button>
-        {price !== null && <p className="result">Predicted Price: ₹{price}</p>}
+        {price !== null && (
+          <p className="result">
+            {" "}
+            Predicted Price: ₹
+            {Number(price).toLocaleString("en-IN", {
+              maximumFractionDigits: 2,
+              minimumFractionDigits: 2,
+            })}
+          </p>
+        )}
       </form>
     </div>
   );

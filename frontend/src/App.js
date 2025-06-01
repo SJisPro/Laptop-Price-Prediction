@@ -109,7 +109,7 @@ function App() {
         <button type="submit" className="submit-button">
           Predict
         </button>
-        {price !== null && <p className="result">Predicted Price: €{price}</p>}
+        {price !== null && <p className="result">Predicted Price: ₹{price}</p>}
       </form>
     </div>
   );

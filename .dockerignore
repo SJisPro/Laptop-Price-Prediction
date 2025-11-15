@@ -1,0 +1,14 @@
+# Root-level dockerignore
+node_modules
+.git
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+build
+dist
+.env

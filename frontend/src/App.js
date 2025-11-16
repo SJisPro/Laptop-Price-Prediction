@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://backend-service.team-app2.svc.cluster.local:8000/options")
+      .get("http://34.27.208.171:8000/options")
       .then((res) => setOptions(res.data))
       .catch((err) => console.error("Failed to fetch options:", err));
   }, []);
@@ -33,7 +33,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://backend-service.team-app2.svc.cluster.local:8000/predict",
+        "http://34.27.208.171:8000/predict",
         form
       );
       setPrice(res.data.predicted_price);

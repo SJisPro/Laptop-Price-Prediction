@@ -31,6 +31,14 @@ class LaptopSpecs(BaseModel):
     Gpu_brand: str
     OpSys: str
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
+@app.get("/ready")
+def readiness_check():
+    return {"status": "ready"}
+
 @app.get("/options")
 def get_dropdown_options():
     return {
